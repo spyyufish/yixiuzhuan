@@ -4,31 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>弈修传 — 修仙战棋</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:#0a0e1a;color:#ddd;font-family:'Microsoft YaHei','PingFang SC',sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;}
-.loading{text-align:center;padding:20px;}
-.loading .icon{font-size:80px;display:block;margin-bottom:20px;animation:pulse 1.5s ease-in-out infinite;}
-.loading h1{font-size:24px;color:#ffd700;margin-bottom:8px;letter-spacing:4px;}
-.loading p{font-size:14px;color:#888;margin-bottom:16px;}
-.spinner{width:32px;height:32px;border:3px solid rgba(255,215,0,0.15);border-top-color:#ffd700;border-radius:50%;animation:spin 0.8s linear infinite;margin:20px auto;}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-</style>
 <script>
-(function(){
-  var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
-  var target = isMobile ? 'mobile.html' : 'pc.html';
-  window.location.href = target;
-})();
+// 直接跳转，不显示加载画面
+var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+window.location.replace(isMobile ? 'mobile.html' : 'pc.html');
 </script>
 </head>
-<body>
-<div class="loading">
-  <span class="icon">🏯</span>
-  <h1>弈修传</h1>
-  <p>修仙门派大乱斗 · 策略合成战群仙</p>
-  <div class="spinner"></div>
-</div>
-</body>
+<body></body>
 </html>
